@@ -11,9 +11,10 @@ import { NgbDropdownModule, NgbTooltipModule, NgbNavModule } from '@ng-bootstrap
 import { SimplebarAngularModule } from 'simplebar-angular';
 
 import { DefaultComponent } from './default/default.component';
+import { SummaryComponent } from './summary/summary.component';
 
 @NgModule({
-  declarations: [DefaultComponent],
+  declarations: [DefaultComponent, SummaryComponent],
   imports: [
     CommonModule,
     FormsModule,

@@ -32,7 +32,8 @@
       "MY_WALLET": "My Wallet",
       "SETTINGS": "Settings",
       "LOCK_SCREEN": "Lock screen",
-      "LOGOUT": "Logout"
+      "LOGOUT": "Logout",
+      "CHANGE_PASSWORD": "Change Password"
     }
   },
   "MENUITEMS": {
@@ -59,8 +60,29 @@
         "PRELOADER": "Preloader"
       }
     },
+    "PURCHASEAGREEMENT": {
+      "TEXT": "Purchase Agreement"
+    },
+    "SALESAGREEMENT": {
+      "TEXT": "Sales Agreement"
+    },
+    "VEHICLEMASTER": {
+      "TEXT": "Vehicle Master"
+    },
+    "HPAPPLICATION": {
+      "TEXT": "HP Application"
+    },
+    "FLOORSTOCKAPPLICATION": {
+      "TEXT": "Floor Stock Application"
+    },
+    "INSURANCEQUOTATION": {
+      "TEXT": "Insurance Quotation"
+    },
+    "CONTACT": {
+      "TEXT": "Contact"
+    },
     "APPS": {
-      "TEXT": "Applications Track"
+      "TEXT": "Apps"
     },
     "CALENDAR": { 
       "TEXT": "Calendar"
@@ -110,9 +132,6 @@
     },
     "PAGES": {
       "TEXT": "Pages"
-    },
-    "USERS": {
-      "TEXT": "Users"
     },
     "AUTHENTICATION": {
       "TEXT": "Authentication",
@@ -230,6 +249,24 @@
           }
         }
       }
-    }
+    }    
+  },
+  "DASHBOARD": {
+    "HEADER_TITLE": {
+      "PURCHASE_AGREEMENT": "Purchase Agreement",
+      "SALES_AGREEMENT": "Sales Agreement",
+      "VEHICLE_MASTER": "Vehicle Master",
+      "HP_APPLICATION": "HP Application",
+      "FLOOR_STOCK_APPLICATION": "Floor Stock Application",
+      "INSURANCE_QUOTATION": "Insurance Quotation"
+    },
+    "HEADER_DESCRIPTION": {
+      "PURCHASE_AGREEMENT": "Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus tincidunt.",
+      "SALES_AGREEMENT": "Sales Agreement",
+      "VEHICLE_MASTER": "Vehicle Master",
+      "HP_APPLICATION": "HP Application",
+      "FLOOR_STOCK_APPLICATION": "Floor Stock Application",
+      "INSURANCE_QUOTATION": "Insurance Quotation"
+    }         
   }
 }

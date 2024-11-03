@@ -6,7 +6,7 @@ export const USERS: User[] = [
       name: 'Simon Ryles',
       image: 'assets/images/users/avatar-2.jpg',
       position: 'Full Stack Developer',
-      email: 'SimonRyles@trackhub.com',
+      email: 'SimonRyles@minible.com',
       index: 1,
     },
     {
@@ -14,14 +14,14 @@ export const USERS: User[] = [
       name: 'Marion Walker',
       image: 'assets/images/users/avatar-3.jpg',
       position: 'Frontend Developer',
-      email: 'MarionWalker@trackhub.com',
+      email: 'MarionWalker@minible.com',
       index: 2,
     },
     {
       id: '#MN0130',
       name: 'Frederick White',
       position: 'UI/UX Designer',
-      email: 'FrederickWhite@trackhub.com',
+      email: 'FrederickWhite@minible.com',
       index: 3,
     },
     {
@@ -29,14 +29,14 @@ export const USERS: User[] = [
       name: 'Shanon Marvin',
       image: 'assets/images/users/avatar-4.jpg',
       position: 'Backend Developer',
-      email: 'ShanonMarvin@trackhub.com',
+      email: 'ShanonMarvin@minible.com',
       index: 4,
     },
     {
       id: '#MN0128',
       name: 'Mark Jones',
       position: 'Frontend Developer',
-      email: 'MarkJones@trackhub.com',
+      email: 'MarkJones@minible.com',
       index: 5,
     },
     {
@@ -44,7 +44,7 @@ export const USERS: User[] = [
       name: 'Janice Morgan',
       image: 'assets/images/users/avatar-5.jpg',
       position: 'Backend Developer',
-      email: 'JaniceMorgan@trackhub.com',
+      email: 'JaniceMorgan@minible.com',
       index: 6,
     },
     {
@@ -52,7 +52,7 @@ export const USERS: User[] = [
       name: 'Patrick Petty',
       image: 'assets/images/users/avatar-7.jpg',
       position: 'UI/UX Designer',
-      email: 'PatrickPetty@trackhub.com',
+      email: 'PatrickPetty@minible.com',
       index: 7,
     },
     {
@@ -60,7 +60,7 @@ export const USERS: User[] = [
       name: 'Marilyn Horton',
       image: 'assets/images/users/avatar-8.jpg',
       position: 'Backend Developer',
-      email: 'MarilynHorton@trackhub.com',
+      email: 'MarilynHorton@minible.com',
       index: 8,
     },
     {
@@ -68,14 +68,14 @@ export const USERS: User[] = [
       name: 'Neal Womack',
       image: 'assets/images/users/avatar-2.jpg',
       position: 'Full Stack Developer',
-      email: 'NealWomack@trackhub.com',
+      email: 'NealWomack@minible.com',
       index: 9,
     },
     {
       id: '#MN0123',
       name: 'Steven Williams',
       position: 'Frontend Developer',
-      email: 'StevenWilliams@trackhub.com',
+      email: 'StevenWilliams@minible.com',
       index: 10,
     },
     {
@@ -83,7 +83,7 @@ export const USERS: User[] = [
       name: 'Connie Franco',
       image: 'assets/images/users/avatar-2.jpg',
       position: 'Full Stack Developer',
-      email: 'ConnieFranco@trackhub.com',
+      email: 'ConnieFranco@minible.com',
       index: 11,
     },
     {
@@ -91,7 +91,7 @@ export const USERS: User[] = [
       name: 'Lara Casillas',
       image: 'assets/images/users/avatar-2.jpg',
       position: 'Full Stack Developer',
-      email: 'LaraCasillas@trackhub.com',
+      email: 'LaraCasillas@minible.com',
       index: 12,
     },
   ];

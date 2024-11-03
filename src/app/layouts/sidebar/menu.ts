@@ -3,255 +3,267 @@ import { MenuItem } from './menu.model';
 export const MENU: MenuItem[] = [
     {
         id: 1,
-        label: 'MENUITEMS.MENU.TEXT',
+        label: 'THURSDAY DD/MM/YYYY',
         isTitle: true
     },
     {
         id: 2,
         label: 'MENUITEMS.DASHBOARDS.TEXT',
         icon: 'uil-home-alt',
-        badge: {
-            variant: 'primary',
-            text: '01', //'MENUITEMS.DASHBOARDS.BADGE',
-        },
+        // badge: {
+        //     variant: 'primary',
+        //     text: '01', //'MENUITEMS.DASHBOARDS.BADGE',
+        // },
         link: '/',
+    },
+    {
+        id: 3,
+        label: 'MENUITEMS.SALESQUOTATION.TEXT',
+        icon: 'uil-tag-alt',
+        link: '/sales-quotation-listing',
+    },
+    {
+        id: 4,
+        label: 'MENUITEMS.PURCHASEQUOTATION.TEXT',
+        icon: 'uil-shopping-cart-alt',
+        link: '/purchase-quotation-listing',
     },
     // {
     //     id: 3,
     //     isLayout: true
+    // },    
+    // {
+    //     id: 4,
+    //     label: 'MENUITEMS.APPS.TEXT',
+    //     isTitle: true
     // },
-    {
-        id: 4,
-        label: 'MENUITEMS.APPS.TEXT',
-        isTitle: true
-    },
-    {
-        id: 5,
-        label: 'MENUITEMS.CALENDAR.TEXT',
-        icon: 'uil-calender',
-        link: '/calendar',
-    },
-    {
-        id: 6,
-        label: 'MENUITEMS.CHAT.TEXT',
-        icon: 'uil-comments-alt',
-        link: '/chat',
-    },
-    {
-        id: 6,
-        label: 'MENUITEMS.FILEMANAGER.TEXT',
-        icon: 'uil-comments-alt',
-        link: '/file-manager',
-    },
-    {
-        id: 7,
-        label: 'MENUITEMS.ECOMMERCE.TEXT',
-        icon: 'uil-store',
-        subItems: [
-            {
-                id: 8,
-                label: 'MENUITEMS.ECOMMERCE.LIST.PRODUCTS',
-                link: '/ecommerce/products',
-                parentId: 7
-            },
-            {
-                id: 9,
-                label: 'MENUITEMS.ECOMMERCE.LIST.PRODUCTDETAIL',
-                link: '/ecommerce/product-detail/1',
-                parentId: 7
-            },
-            {
-                id: 10,
-                label: 'MENUITEMS.ECOMMERCE.LIST.ORDERS',
-                link: '/ecommerce/orders',
-                parentId: 7
-            },
-            {
-                id: 11,
-                label: 'MENUITEMS.ECOMMERCE.LIST.CUSTOMERS',
-                link: '/ecommerce/customers',
-                parentId: 7
-            },
-            {
-                id: 12,
-                label: 'MENUITEMS.ECOMMERCE.LIST.CART',
-                link: '/ecommerce/cart',
-                parentId: 7
-            },
-            {
-                id: 13,
-                label: 'MENUITEMS.ECOMMERCE.LIST.CHECKOUT',
-                link: '/ecommerce/checkout',
-                parentId: 7
-            },
-            {
-                id: 14,
-                label: 'MENUITEMS.ECOMMERCE.LIST.SHOPS',
-                link: '/ecommerce/shops',
-                parentId: 7
-            },
-            {
-                id: 15,
-                label: 'MENUITEMS.ECOMMERCE.LIST.ADDPRODUCT',
-                link: '/ecommerce/add-product',
-                parentId: 7
-            },
-        ]
-    },
-    {
-        id: 16,
-        label: 'MENUITEMS.EMAIL.TEXT',
-        icon: 'uil-envelope',
-        subItems: [
-            {
-                id: 17,
-                label: 'MENUITEMS.EMAIL.LIST.INBOX',
-                link: '/email/inbox',
-                parentId: 16
-            },
-            {
-                id: 18,
-                label: 'MENUITEMS.EMAIL.LIST.READEMAIL',
-                link: '/email/read/1',
-                parentId: 16
-            }
-        ]
-    },
-    {
-        id: 19,
-        label: 'MENUITEMS.INVOICES.TEXT',
-        icon: 'uil-invoice',
-        subItems: [
-            {
-                id: 20,
-                label: 'MENUITEMS.INVOICES.LIST.INVOICELIST',
-                link: '/invoices/list',
-                parentId: 19
-            },
-            {
-                id: 21,
-                label: 'MENUITEMS.INVOICES.LIST.INVOICEDETAIL',
-                link: '/invoices/detail',
-                parentId: 19
-            },
-        ]
-    },
-    {
-        id: 22,
-        label: 'MENUITEMS.CONTACTS.TEXT',
-        icon: 'uil-book-alt',
-        subItems: [
-            {
-                id: 23,
-                label: 'MENUITEMS.CONTACTS.LIST.USERGRID',
-                link: '/contacts/grid',
-                parentId: 22
-            },
-            {
-                id: 24,
-                label: 'MENUITEMS.CONTACTS.LIST.USERLIST',
-                link: '/contacts/list',
-                parentId: 22
-            },
-            {
-                id: 25,
-                label: 'MENUITEMS.CONTACTS.LIST.PROFILE',
-                link: '/contacts/profile',
-                parentId: 22
-            }
-        ]
-    },
-    {
-        id: 26,
-        label: 'MENUITEMS.USERS.TEXT',
-        isTitle: true
-    },
-    {
-        id: 27,
-        label: 'MENUITEMS.AUTHENTICATION.TEXT',
-        icon: 'uil-user-circle',
-        subItems: [
-            {
-                id: 28,
-                label: 'MENUITEMS.AUTHENTICATION.LIST.LOGIN',
-                link: '/pages/login-1',
-                parentId: 27
-            },
-            {
-                id: 29,
-                label: 'MENUITEMS.AUTHENTICATION.LIST.REGISTER',
-                link: '/pages/register-1',
-                parentId: 27
-            },
-            {
-                id: 30,
-                label: 'MENUITEMS.AUTHENTICATION.LIST.RECOVERPWD',
-                link: '/pages/recoverpwd-1',
-                parentId: 27
-            },
-            {
-                id: 31,
-                label: 'MENUITEMS.AUTHENTICATION.LIST.LOCKSCREEN',
-                link: '/pages/lock-screen-1',
-                parentId: 27
-            }
-        ]
-    },
-    {
-        id: 32,
-        label: 'MENUITEMS.UTILITY.TEXT',
-        icon: 'uil-file-alt',
-        subItems: [
-            {
-                id: 34,
-                label:'MENUITEMS.UTILITY.LIST.STARTER',
-                link: '/pages/starter',
-                parentId: 32
-            },
-            {
-                id: 35,
-                label: 'MENUITEMS.UTILITY.LIST.MAINTENANCE',
-                link: '/pages/maintenance',
-                parentId: 32
-            },
-            {
-                id: 36,
-                label: 'MENUITEMS.UTILITY.LIST.COMINGSOON',
-                link: '/pages/comingsoon',
-                parentId: 32
-            },
-            {
-                id: 37,
-                label: 'MENUITEMS.UTILITY.LIST.TIMELINE',
-                link: '/pages/timeline',
-                parentId: 32
-            },
-            {
-                id: 38,
-                label: 'MENUITEMS.UTILITY.LIST.FAQS',
-                link: '/pages/faqs',
-                parentId: 32
-            },
-            {
-                id: 39,
-                label: 'MENUITEMS.UTILITY.LIST.PRICING',
-                link: '/pages/pricing',
-                parentId: 32
-            },
-            {
-                id: 40,
-                label: 'MENUITEMS.UTILITY.LIST.ERROR404',
-                link: '/pages/404',
-                parentId: 32
-            },
-            {
-                id: 41,
-                label: 'MENUITEMS.UTILITY.LIST.ERROR500',
-                link: '/pages/500',
-                parentId: 32
-            },
-        ]
-    },
+    // {
+    //     id: 5,
+    //     label: 'MENUITEMS.CALENDAR.TEXT',
+    //     icon: 'uil-calender',
+    //     link: '/calendar',
+    // },
+    // {
+    //     id: 6,
+    //     label: 'MENUITEMS.CHAT.TEXT',
+    //     icon: 'uil-comments-alt',
+    //     link: '/chat',
+    // },
+    // {
+    //     id: 6,
+    //     label: 'MENUITEMS.FILEMANAGER.TEXT',
+    //     icon: 'uil-comments-alt',
+    //     link: '/file-manager',
+    // },
+    // {
+    //     id: 7,
+    //     label: 'MENUITEMS.ECOMMERCE.TEXT',
+    //     icon: 'uil-store',
+    //     subItems: [
+    //         {
+    //             id: 8,
+    //             label: 'MENUITEMS.ECOMMERCE.LIST.PRODUCTS',
+    //             link: '/ecommerce/products',
+    //             parentId: 7
+    //         },
+    //         {
+    //             id: 9,
+    //             label: 'MENUITEMS.ECOMMERCE.LIST.PRODUCTDETAIL',
+    //             link: '/ecommerce/product-detail/1',
+    //             parentId: 7
+    //         },
+    //         {
+    //             id: 10,
+    //             label: 'MENUITEMS.ECOMMERCE.LIST.ORDERS',
+    //             link: '/ecommerce/orders',
+    //             parentId: 7
+    //         },
+    //         {
+    //             id: 11,
+    //             label: 'MENUITEMS.ECOMMERCE.LIST.CUSTOMERS',
+    //             link: '/ecommerce/customers',
+    //             parentId: 7
+    //         },
+    //         {
+    //             id: 12,
+    //             label: 'MENUITEMS.ECOMMERCE.LIST.CART',
+    //             link: '/ecommerce/cart',
+    //             parentId: 7
+    //         },
+    //         {
+    //             id: 13,
+    //             label: 'MENUITEMS.ECOMMERCE.LIST.CHECKOUT',
+    //             link: '/ecommerce/checkout',
+    //             parentId: 7
+    //         },
+    //         {
+    //             id: 14,
+    //             label: 'MENUITEMS.ECOMMERCE.LIST.SHOPS',
+    //             link: '/ecommerce/shops',
+    //             parentId: 7
+    //         },
+    //         {
+    //             id: 15,
+    //             label: 'MENUITEMS.ECOMMERCE.LIST.ADDPRODUCT',
+    //             link: '/ecommerce/add-product',
+    //             parentId: 7
+    //         },
+    //     ]
+    // },
+    // {
+    //     id: 16,
+    //     label: 'MENUITEMS.EMAIL.TEXT',
+    //     icon: 'uil-envelope',
+    //     subItems: [
+    //         {
+    //             id: 17,
+    //             label: 'MENUITEMS.EMAIL.LIST.INBOX',
+    //             link: '/email/inbox',
+    //             parentId: 16
+    //         },
+    //         {
+    //             id: 18,
+    //             label: 'MENUITEMS.EMAIL.LIST.READEMAIL',
+    //             link: '/email/read/1',
+    //             parentId: 16
+    //         }
+    //     ]
+    // },
+    // {
+    //     id: 19,
+    //     label: 'MENUITEMS.INVOICES.TEXT',
+    //     icon: 'uil-invoice',
+    //     subItems: [
+    //         {
+    //             id: 20,
+    //             label: 'MENUITEMS.INVOICES.LIST.INVOICELIST',
+    //             link: '/invoices/list',
+    //             parentId: 19
+    //         },
+    //         {
+    //             id: 21,
+    //             label: 'MENUITEMS.INVOICES.LIST.INVOICEDETAIL',
+    //             link: '/invoices/detail',
+    //             parentId: 19
+    //         },
+    //     ]
+    // },
+    // {
+    //     id: 22,
+    //     label: 'MENUITEMS.CONTACTS.TEXT',
+    //     icon: 'uil-book-alt',
+    //     subItems: [
+    //         {
+    //             id: 23,
+    //             label: 'MENUITEMS.CONTACTS.LIST.USERGRID',
+    //             link: '/contacts/grid',
+    //             parentId: 22
+    //         },
+    //         {
+    //             id: 24,
+    //             label: 'MENUITEMS.CONTACTS.LIST.USERLIST',
+    //             link: '/contacts/list',
+    //             parentId: 22
+    //         },
+    //         {
+    //             id: 25,
+    //             label: 'MENUITEMS.CONTACTS.LIST.PROFILE',
+    //             link: '/contacts/profile',
+    //             parentId: 22
+    //         }
+    //     ]
+    // },
+    // {
+    //     id: 26,
+    //     label: 'MENUITEMS.PAGES.TEXT',
+    //     isTitle: true
+    // },
+    // {
+    //     id: 27,
+    //     label: 'MENUITEMS.AUTHENTICATION.TEXT',
+    //     icon: 'uil-user-circle',
+    //     subItems: [
+    //         {
+    //             id: 28,
+    //             label: 'MENUITEMS.AUTHENTICATION.LIST.LOGIN',
+    //             link: '/pages/login-1',
+    //             parentId: 27
+    //         },
+    //         {
+    //             id: 29,
+    //             label: 'MENUITEMS.AUTHENTICATION.LIST.REGISTER',
+    //             link: '/pages/register-1',
+    //             parentId: 27
+    //         },
+    //         {
+    //             id: 30,
+    //             label: 'MENUITEMS.AUTHENTICATION.LIST.RECOVERPWD',
+    //             link: '/pages/recoverpwd-1',
+    //             parentId: 27
+    //         },
+    //         {
+    //             id: 31,
+    //             label: 'MENUITEMS.AUTHENTICATION.LIST.LOCKSCREEN',
+    //             link: '/pages/lock-screen-1',
+    //             parentId: 27
+    //         }
+    //     ]
+    // },
+    // {
+    //     id: 32,
+    //     label: 'MENUITEMS.UTILITY.TEXT',
+    //     icon: 'uil-file-alt',
+    //     subItems: [
+    //         {
+    //             id: 34,
+    //             label:'MENUITEMS.UTILITY.LIST.STARTER',
+    //             link: '/pages/starter',
+    //             parentId: 32
+    //         },
+    //         {
+    //             id: 35,
+    //             label: 'MENUITEMS.UTILITY.LIST.MAINTENANCE',
+    //             link: '/pages/maintenance',
+    //             parentId: 32
+    //         },
+    //         {
+    //             id: 36,
+    //             label: 'MENUITEMS.UTILITY.LIST.COMINGSOON',
+    //             link: '/pages/comingsoon',
+    //             parentId: 32
+    //         },
+    //         {
+    //             id: 37,
+    //             label: 'MENUITEMS.UTILITY.LIST.TIMELINE',
+    //             link: '/pages/timeline',
+    //             parentId: 32
+    //         },
+    //         {
+    //             id: 38,
+    //             label: 'MENUITEMS.UTILITY.LIST.FAQS',
+    //             link: '/pages/faqs',
+    //             parentId: 32
+    //         },
+    //         {
+    //             id: 39,
+    //             label: 'MENUITEMS.UTILITY.LIST.PRICING',
+    //             link: '/pages/pricing',
+    //             parentId: 32
+    //         },
+    //         {
+    //             id: 40,
+    //             label: 'MENUITEMS.UTILITY.LIST.ERROR404',
+    //             link: '/pages/404',
+    //             parentId: 32
+    //         },
+    //         {
+    //             id: 41,
+    //             label: 'MENUITEMS.UTILITY.LIST.ERROR500',
+    //             link: '/pages/500',
+    //             parentId: 32
+    //         },
+    //     ]
+    // },
     // {
     //     id: 42,
     //     label: 'MENUITEMS.COMPONENTS.TEXT',

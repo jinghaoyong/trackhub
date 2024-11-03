@@ -9,8 +9,6 @@ import { environment } from '../../../environments/environment';
 import { CookieService } from 'ngx-cookie-service';
 import { LanguageService } from '../../core/services/language.service';
 import { TranslateService } from '@ngx-translate/core';
-import { FirebaseService } from 'src/app/core/services/firebase/firebase.service';
-import { User } from 'src/app/core/models/auth.models';
 
 @Component({
   selector: 'app-topbar',
@@ -30,17 +28,13 @@ export class TopbarComponent implements OnInit {
   countryName: any;
   valueset;
 
-  user: User;
-
-  constructor(
-    @Inject(DOCUMENT) private document: any,
+  constructor(@Inject(DOCUMENT) private document: any,
     private router: Router,
-    private firebaseServ: FirebaseService,
+    private authService: AuthenticationService,
+    private authFackservice: AuthfakeauthenticationService,
     public languageService: LanguageService,
     public translate: TranslateService,
-    public _cookiesService: CookieService
-  ) {
-    this.user = this.firebaseServ.currentUserValue
+    public _cookiesService: CookieService) {
   }
 
   listLang = [
@@ -108,7 +102,11 @@ export class TopbarComponent implements OnInit {
    */
   logout() {
     //user logout
-    this.firebaseServ.logout();
+    if (environment.defaultauth === 'firebase') {
+      this.authService.logout();
+    } else {
+      this.authFackservice.logout();
+    }
     this.router.navigate(['/account/login']);
   }
 

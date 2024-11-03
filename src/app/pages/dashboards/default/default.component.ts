@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { transactions, lineColumAreaChart, revenueColumnChart, customerRadialBarChart, orderRadialBarChart, growthColumnChart} from './data';
 
 import { ChartType } from './dashboard.model';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-default',
@@ -19,14 +20,14 @@ export class DefaultComponent implements OnInit {
   transactions;
   breadCrumbItems: Array<{}>;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     /**
      * Fetches the data
      */
     this.fetchData();
-    this.breadCrumbItems = [{ label: 'trackhub' }, { label: 'Dashboard', active: true }];
+    this.breadCrumbItems = [{ label: 'Minible' }, { label: 'Dashboard', active: true }];
   }
 
   /**
@@ -43,4 +44,11 @@ export class DefaultComponent implements OnInit {
     this.transactions = transactions;
   }
 
+  ViewSalesQuotation() {
+    this.router.navigate(['/sales-quotation-listing']);
+  }
+
+  ViewPurchaseQuotation() {
+    this.router.navigate(['/purchase-quotation-listing']);
+  }
 }

@@ -8,7 +8,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
 
 import { environment } from '../../../../environments/environment';
-import { FirebaseService } from 'src/app/core/services/firebase/firebase.service';
 
 @Component({
   selector: 'app-login',
@@ -26,25 +25,16 @@ export class LoginComponent implements OnInit, AfterViewInit {
   error = '';
   returnUrl: string;
 
-  // set the currenr year
-  year: number = new Date().getFullYear();
-
   // tslint:disable-next-line: max-line-length
-  constructor(
-    private formBuilder: UntypedFormBuilder,
-    private route: ActivatedRoute,
-    private router: Router,
-    private authenticationService: AuthenticationService,
-    private authFackservice: AuthfakeauthenticationService,
-    private firebaseServ: FirebaseService
-  ) { }
+  constructor(private formBuilder: UntypedFormBuilder, private route: ActivatedRoute, private router: Router, private authenticationService: AuthenticationService,
+    private authFackservice: AuthfakeauthenticationService) { }
 
   ngOnInit() {
     document.body.setAttribute('class', 'authentication-bg');
 
     this.loginForm = this.formBuilder.group({
-      email: ['admin', [Validators.required]],
-      password: ['admin', [Validators.required]],
+      email: ['superdew@iauto.com', [Validators.required, Validators.email]],
+      password: ['123456', [Validators.required]],
     });
 
     // reset login status
@@ -57,7 +47,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
   }
 
-  ngOnDestroy() {
+  ngOnDestroy() { 
     document.body.classList.remove('authentication-bg')
   }
 
@@ -74,16 +64,25 @@ export class LoginComponent implements OnInit, AfterViewInit {
     if (this.loginForm.invalid) {
       return;
     } else {
-
-      this.firebaseServ.login(this.f.email.value, this.f.password.value).then((user: any) => {
-        document.body.removeAttribute('class');
-        this.router.navigate(['/']);
-      })
-        .catch(error => {
-          console.log("error",error)
-          this.error = error ? error : '';
-        });
-
+      if (environment.defaultauth === 'firebase') {
+        this.authenticationService.login(this.f.email.value, this.f.password.value).then((res: any) => {
+          document.body.removeAttribute('class');
+          this.router.navigate(['/account/select-company']);
+        })
+          .catch(error => {
+            this.error = error ? error : '';
+          });
+      } else {
+        this.authFackservice.login(this.f.email.value, this.f.password.value)
+          .pipe(first())
+          .subscribe(
+            data => {
+              this.router.navigate(['/account/select-company']);
+            },
+            error => {
+              this.error = error ? error : '';
+            });
+      }
     }
   }
 }

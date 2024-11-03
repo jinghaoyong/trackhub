@@ -1,0 +1,71 @@
+<!-- <div class="float-end">
+    <div class="dropdown" ngbDropdown>
+        <a class="dropdown-toggle" href="javascript:void(0)" id="dropdownMenuButton4"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>
+            <span class="text-muted">Monthly<i class="mdi mdi-chevron-down ms-1"></i></span>
+        </a>
+
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton4"
+            ngbDropdownMenu>
+            <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+            <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+            <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+        </div>
+    </div>
+</div> -->
+
+<h4 class="card-title">{{
+    prefixTranslate + dashboardTitle | translate
+}}</h4>
+
+<div class="text-center">
+    <div class="avatar-sm mx-auto mb-4">
+        <span class="avatar-title rounded-circle bg-primary-subtle font-size-24">
+            <i [class]="dashboardIcon"></i>
+        </span>
+    </div>
+    <p class="font-16 text-muted mb-2"></p>
+    <h5><span class="text-reset">Total - 300</span></h5>
+    <p class="text-muted">{{
+        prefixTranslate + dashboardDescription | translate
+    }}</p>
+</div>
+<div class="row mt-4">
+    <div class="col-4">
+        <div class="social-source text-center mt-3">
+            <div class="avatar-xs mx-auto mb-3">
+                <span class="avatar-title rounded-circle bg-info font-size-16">
+                    <i class="mdi mdi-book-cross text-white"></i>
+                </span>
+            </div>
+            <h5 class="font-size-15">Open</h5>
+            <p class="text-muted mb-0">50</p>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="social-source text-center mt-3">
+            <div class="avatar-xs mx-auto mb-3">
+                <span class="avatar-title rounded-circle bg-warning font-size-16">
+                    <i class="mdi mdi-book-edit text-white"></i>
+                </span>
+            </div>
+            <h5 class="font-size-15">Quoted</h5>
+            <p class="text-muted mb-0">100</p>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="social-source text-center mt-3">
+            <div class="avatar-xs mx-auto mb-3">
+                <span class="avatar-title rounded-circle bg-success font-size-16">
+                    <i class="mdi mdi-book-check text-white"></i>
+                </span>
+            </div>
+            <h5 class="font-size-15">Confirmed</h5>
+            <p class="text-muted mb-0">150</p>
+        </div>
+    </div>
+</div>
+
+<div class="d-grid gap-2 mt-3">
+    <button type="button" class="btn btn-primary btn-sm font-size-15" (click)="handleListingPage()">View<i class="mdi mdi-arrow-right-circle" style="padding-left: 5px;"></i></button>
+</div>

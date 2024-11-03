@@ -4,11 +4,16 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { PasswordresetComponent } from './passwordreset/passwordreset.component';
+import { SelectCompanyComponent } from './select-company/select-company.component';
 
 const routes: Routes = [
     {
         path: 'login',
         component: LoginComponent
+    },
+    {
+        path: 'select-company',
+        component: SelectCompanyComponent
     },
     {
         path: 'signup',

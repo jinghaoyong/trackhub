@@ -5,8 +5,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { SimplebarAngularModule } from 'simplebar-angular';
 
-import { NgbNavModule, NgbDropdownModule, NgbModalModule, NgbTooltipModule, NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbNavModule, NgbDropdownModule, NgbModalModule, NgbTooltipModule, NgbCollapseModule, NgbPaginationModule, NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgApexchartsModule } from 'ng-apexcharts';
+import { CdkStepperModule } from '@angular/cdk/stepper';
+import { NgStepperModule } from 'angular-ng-stepper';
 
 import { FullCalendarModule } from '@fullcalendar/angular';
 
@@ -25,6 +27,10 @@ import { DropzoneConfigInterface } from 'ngx-dropzone-wrapper';
 import { CalendarComponent } from './calendar/calendar.component';
 import { ChatComponent } from './chat/chat.component';
 import { FileManagerComponent } from './file-manager/file-manager.component';
+import { SalesQuotationComponent } from './sales-quotation/sales-quotation.component';
+import { SalesQuotationViewComponent } from './view/sales-quotation-view/sales-quotation-view.component';
+import { SalesQuotationListingComponent } from './listing/sales-quotation-listing/sales-quotation-listing.component';
+import { PurchaseQuotationListingComponent } from './listing/purchase-quotation-listing/purchase-quotation-listing.component';
 
 const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
   // Change this to your upload POST address:
@@ -32,7 +38,7 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
 };
 
 @NgModule({
-  declarations: [CalendarComponent, ChatComponent, FileManagerComponent],
+  declarations: [CalendarComponent, ChatComponent, FileManagerComponent, SalesQuotationComponent, SalesQuotationViewComponent, SalesQuotationListingComponent, PurchaseQuotationListingComponent],
   imports: [
     CommonModule,
     NgSelectModule,
@@ -49,6 +55,10 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
     NgbNavModule,
     NgbTooltipModule,
     NgbCollapseModule,
+    NgbPaginationModule,
+    NgbAccordionModule,
+    NgStepperModule,
+    CdkStepperModule,
     SimplebarAngularModule,
     DropzoneModule,
   ],

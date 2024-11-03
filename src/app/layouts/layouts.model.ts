@@ -9,8 +9,8 @@ export const LAYOUT_WIDTH = 'fluid';
 
 export const LAYOUT_POSITION = 'fixed';
 
-export const TOPBAR = 'light';
+export const TOPBAR = 'dark';
 
-export const SIDEBAR_SIZE = 'lg';
+export const SIDEBAR_SIZE = 'small';
 
 export const SIDEBAR_COLOR = 'light';

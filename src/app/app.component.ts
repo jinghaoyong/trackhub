@@ -5,9 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  ngOnInit() {
-    //  document.getElementsByTagName("html")[0].setAttribute("dir", "rtl");  
-  }
 
+export class AppComponent implements OnInit {
+  ngOnInit() { }
 }

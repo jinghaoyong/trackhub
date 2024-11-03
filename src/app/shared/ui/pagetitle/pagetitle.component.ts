@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-page-title',
@@ -10,9 +11,12 @@ export class PagetitleComponent implements OnInit {
   @Input() breadcrumbItems;
   @Input() title: string;
 
-  constructor() { }
+  constructor(private location: Location) { }
 
   ngOnInit() {
   }
 
+  back() {
+    this.location.back();
+  }
 }

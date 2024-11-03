@@ -7,6 +7,7 @@ import { MENU } from './menu';
 import { MenuItem } from './menu.model';
 import { TranslateService } from '@ngx-translate/core';
 import { EventService } from '../../core/services/event.service';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-sidebar',
@@ -28,20 +29,24 @@ export class SidebarComponent implements OnInit, AfterViewInit, OnChanges {
   @ViewChild('sideMenu') sideMenu: ElementRef;
   @ViewChild('componentRef') scrollRef;
 
-  constructor(private eventService: EventService, private router: Router, public translate: TranslateService) {
+  currentDateAndTime = "";
+
+  constructor(private eventService: EventService, private router: Router, public translate: TranslateService, private datePipe: DatePipe) {
     router.events.forEach((event) => {
       if (event instanceof NavigationEnd) {
         this._activateMenuDropdown();
         this._scrollElement();
       }
-    });
+    });    
   }
-
 
   ngOnInit() {
     this.initialize();
     this._scrollElement();
     // document.body.setAttribute('data-sidebar', 'light');
+
+    this.currentDateAndTime = this.datePipe.transform(new Date(), 'EEEE dd/MM/yyyy HH:mm:ss a');
+    // document.getElementById("datetime").innerHTML = this.currentDateAndTime;
   }
   /**
    * Change the layout onclick
@@ -98,7 +103,7 @@ export class SidebarComponent implements OnInit, AfterViewInit, OnChanges {
   /**
    * Compact sidebar
    */
-  compactSidebar() {
+  compactSidebar() {    
     document.body.setAttribute('data-sidebar-size', 'small');
     document.body.setAttribute('data-sidebar', 'dark');
     document.body.removeAttribute('data-topbar');

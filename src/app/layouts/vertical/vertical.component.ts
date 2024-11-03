@@ -53,7 +53,7 @@ export class VerticalComponent implements OnInit, AfterViewInit {
       } else if (currentSIdebarSize == "md") {
         (document.body.getAttribute('data-sidebar-size') == "md") ? document.body.setAttribute('data-sidebar-size', 'sm') : document.body.setAttribute('data-sidebar-size', 'md')
       } else {
-        (document.body.getAttribute('data-sidebar-size') == "sm") ? document.body.setAttribute('data-sidebar-size', 'lg') : document.body.setAttribute('data-sidebar-size', 'sm')
+        (document.body.getAttribute('data-sidebar-size') == "sm") ? document.body.setAttribute('data-sidebar-size', 'small') : document.body.setAttribute('data-sidebar-size', 'sm')
       }
     }
     this.isCondensed = !this.isCondensed;

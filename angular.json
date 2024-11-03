@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "trackhub-ng": {
+    "minible-ng": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -24,7 +24,7 @@
               "rxjs", "simplebar", "ng5-slider", "apexcharts", "ng2-charts", "chart.js", "core-js","leaflet","bs-custom-file-input","@ckeditor/ckeditor5-build-classic","sweetalert2",
               "can-use-dom","ev-emitter/ev-emitter","file-saver","dropzone"
             ],
-            "outputPath": "dist/trackhub-ng",
+            "outputPath": "dist/minible-ng",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -86,18 +86,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "trackhub-ng:build"
+            "browserTarget": "minible-ng:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "trackhub-ng:build:production"
+              "browserTarget": "minible-ng:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "trackhub-ng:build"
+            "browserTarget": "minible-ng:build"
           }
         },
         "test": {
@@ -121,11 +121,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "trackhub-ng:serve"
+            "devServerTarget": "minible-ng:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "trackhub-ng:serve:production"
+              "devServerTarget": "minible-ng:serve:production"
             }
           }
         }

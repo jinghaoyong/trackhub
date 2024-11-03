@@ -5,6 +5,9 @@ import { DefaultComponent } from './dashboards/default/default.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { ChatComponent } from './chat/chat.component';
 import { FileManagerComponent } from './file-manager/file-manager.component';
+import { SalesQuotationViewComponent } from './view/sales-quotation-view/sales-quotation-view.component';
+import { SalesQuotationListingComponent } from './listing/sales-quotation-listing/sales-quotation-listing.component';
+import { PurchaseQuotationListingComponent } from './listing/purchase-quotation-listing/purchase-quotation-listing.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: 'dashboard' },
@@ -12,6 +15,10 @@ const routes: Routes = [
   { path: 'calendar', component: CalendarComponent },
   { path: 'chat', component: ChatComponent },
   { path:'file-manager',component:FileManagerComponent},
+  { path: 'sales-quotation', loadChildren: () => import('./create/create.module').then(m => m.CreateModule) },
+  { path: 'sales-quotation-view', component:SalesQuotationViewComponent},
+  { path: 'sales-quotation-listing', component:SalesQuotationListingComponent},
+  { path: 'purchase-quotation-listing', component:PurchaseQuotationListingComponent},
   { path: 'dashboards', loadChildren: () => import('./dashboards/dashboards.module').then(m => m.DashboardsModule) },
   { path: 'ecommerce', loadChildren: () => import('./ecommerce/ecommerce.module').then(m => m.EcommerceModule) },
   { path: 'email', loadChildren: () => import('./email/email.module').then(m => m.EmailModule) },

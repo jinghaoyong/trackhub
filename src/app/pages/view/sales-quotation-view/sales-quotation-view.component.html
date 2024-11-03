@@ -1,0 +1,710 @@
+<div class="container-fluid">
+    <app-page-title title="Sales Quotation Details" [breadcrumbItems]="breadCrumbItems"></app-page-title>
+  
+    <div class="row mb-4">    
+  
+      <div class="col-xl-9" style="display: none;">
+        <div class="card mb-0 p-3">
+          <!-- Nav tabs -->
+          <ul ngbNav #justifiednav="ngbNav" [activeId]="1" class="nav nav-tabs nav-justified nav-tabs-custom">
+            <li [ngbNavItem]="1" class="nav-item">
+              <a ngbNavLink class="nav-link">
+                <i class="uil uil-user-circle font-size-20"></i>
+                <span class="d-none d-sm-block">Customer Information</span>
+              </a>
+              <ng-template ngbNavContent>
+                <ng-template [ngTemplateOutlet]="TabContentAbout"></ng-template>
+              </ng-template>
+            </li>
+            <li [ngbNavItem]="2" class="nav-item">
+              <a ngbNavLink class="nav-link">
+                <i class="uil uil-clipboard-notes font-size-20"></i>
+                <span class="d-none d-sm-block">Vehicle Information</span>
+              </a>
+              <ng-template ngbNavContent>
+                <ng-template [ngTemplateOutlet]="TabContentTasks"></ng-template>
+              </ng-template>
+            </li>
+            <li [ngbNavItem]="3" class="nav-item">
+              <a ngbNavLink class="nav-link">
+                <i class="uil uil-envelope-alt font-size-20"></i>
+                <span class="d-none d-sm-block">Sales Information</span>
+              </a>
+              <ng-template ngbNavContent>
+                <ng-template [ngTemplateOutlet]="TabContentMessages"></ng-template>
+              </ng-template>
+            </li>
+            <li [ngbNavItem]="4" class="nav-item">
+              <a ngbNavLink class="nav-link">
+                <i class="uil uil-envelope-alt font-size-20"></i>
+                <span class="d-none d-sm-block">Finance Information</span>
+              </a>
+              <ng-template ngbNavContent>
+                <ng-template [ngTemplateOutlet]="TabContentMessages"></ng-template>
+              </ng-template>
+            </li>
+            <li [ngbNavItem]="5" class="nav-item">
+              <a ngbNavLink class="nav-link">
+                <i class="uil uil-envelope-alt font-size-20"></i>
+                <span class="d-none d-sm-block">Trade In Information</span>
+              </a>
+              <ng-template ngbNavContent>
+                <ng-template [ngTemplateOutlet]="TabContentMessages"></ng-template>
+              </ng-template>
+            </li>
+          </ul>
+          <div [ngbNavOutlet]="justifiednav"></div>
+        </div>
+  
+        <!-- Tab content -->
+        <ng-template #TabContentAbout>
+          <div class="tab-content p-3">
+            <div class="tab-pane active">
+              <div>
+                <div>
+                  <!-- <h5 class="font-size-16 mb-4">Experience</h5> -->
+
+                  <dl class="row mb-0">
+                    <dt class="col-sm-3">Customer Name</dt>
+                    <dd class="col-sm-3">LIM LAI SONG</dd>
+
+                    <dt class="col-sm-3">NRIC</dt>
+                    <dd class="col-sm-3">S1234567X</dd>               
+                  </dl>
+
+                  <dl class="row mb-0">
+                    <dt class="col-sm-3">Customer Name</dt>
+                    <dd class="col-sm-3">LIM LAI SONG</dd>
+
+                    <dt class="col-sm-3">NRIC</dt>
+                    <dd class="col-sm-3">S1234567X</dd>               
+                  </dl>
+
+                  <dl class="row mb-0">
+                    <dt class="col-sm-3">Customer Name</dt>
+                    <dd class="col-sm-3">LIM LAI SONG</dd>
+
+                    <dt class="col-sm-3">NRIC</dt>
+                    <dd class="col-sm-3">S1234567X</dd>               
+                  </dl>
+  
+                  <ul class="activity-feed mb-0 ps-2" style="display: none;">
+                    <li class="feed-item">
+                      <div class="feed-item-list">
+                        <p class="text-muted mb-1">2019 - 2020</p>
+                        <h5 class="font-size-16">UI/UX Designer</h5>
+                        <p>Abc Company</p>
+                        <p class="text-muted">
+                          To achieve this, it would be necessary to have uniform
+                          grammar, pronunciation and more common words. If several
+                          languages coalesce, the grammar of the resulting
+                          language is more simple and regular than that of the
+                          individual
+                        </p>
+                      </div>
+                    </li>
+                    <li class="feed-item">
+                      <div class="feed-item-list">
+                        <p class="text-muted mb-1">2017 - 2019</p>
+                        <h5 class="font-size-16">Graphic Designer</h5>
+                        <p>xyz Company</p>
+                        <p class="text-muted">
+                          It will be as simple as occidental in fact, it will be
+                          Occidental. To an English person, it will seem like
+                          simplified English, as a skeptical Cambridge friend of
+                          mine told me what Occidental
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+  
+        <ng-template #TabContentTasks>
+          <div class="tab-content p-4">
+            <div class="tab-pane active">
+              <div>
+                <h5 class="font-size-16 mb-3">Active</h5>
+  
+                <div class="table-responsive">
+                  <table class="table table-nowrap table-centered">
+                    <tbody>
+                      <tr>
+                        <td style="width: 60px">
+                          <div class="form-check font-size-16 text-center">
+                            <input type="checkbox" class="form-check-input" id="tasks-activeCheck2" />
+                            <label class="form-check-label" for="tasks-activeCheck2"></label>
+                          </div>
+                        </td>
+                        <td>
+                          <a href="javascript:void(0)" class="fw-bold text-reset">Ecommerce Product Detail</a>
+                        </td>
+  
+                        <td>27 May, 2020</td>
+                        <td style="width: 160px">
+                          <span class="badge bg-primary-subtle font-size-12">Active</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-check font-size-16 text-center">
+                            <input type="checkbox" class="form-check-input" id="tasks-activeCheck1" />
+                            <label class="form-check-label" for="tasks-activeCheck1"></label>
+                          </div>
+                        </td>
+                        <td>
+                          <a href="javascript:void(0)" class="fw-bold text-reset">Ecommerce Product</a>
+                        </td>
+  
+                        <td>26 May, 2020</td>
+                        <td>
+                          <span class="badge bg-primary-subtle font-size-12">Active</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+  
+                <h5 class="font-size-16 my-3">Upcoming</h5>
+  
+                <div class="table-responsive">
+                  <table class="table table-nowrap table-centered">
+                    <tbody>
+                      <tr>
+                        <td style="width: 60px">
+                          <div class="form-check font-size-16 text-center">
+                            <input type="checkbox" class="form-check-input" id="tasks-upcomingCheck3" />
+                            <label class="form-check-label" for="tasks-upcomingCheck3"></label>
+                          </div>
+                        </td>
+                        <td>
+                          <a href="javascript:void(0)" class="fw-bold text-reset">Chat app Page</a>
+                        </td>
+  
+                        <td>-</td>
+                        <td style="width: 160px">
+                          <span class="badge bg-secondary-subtle font-size-12">Waiting</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-check font-size-16 text-center">
+                            <input type="checkbox" class="form-check-input" id="tasks-upcomingCheck2" />
+                            <label class="form-check-label" for="tasks-upcomingCheck2"></label>
+                          </div>
+                        </td>
+                        <td>
+                          <a href="javascript:void(0)" class="fw-bold text-reset">Email Pages</a>
+                        </td>
+  
+                        <td>04 June, 2020</td>
+                        <td>
+                          <span class="badge bg-primary-subtle font-size-12">Approved</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-check font-size-16 text-center">
+                            <input type="checkbox" class="form-check-input" id="tasks-upcomingCheck1" />
+                            <label class="form-check-label" for="tasks-upcomingCheck1"></label>
+                          </div>
+                        </td>
+                        <td>
+                          <a href="javascript:void(0)" class="fw-bold text-reset">Contacts Profile Page</a>
+                        </td>
+  
+                        <td>-</td>
+                        <td>
+                          <span class="badge bg-secondary-subtle font-size-12">Waiting</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+  
+                <h5 class="font-size-16 my-3">Complete</h5>
+  
+                <div class="table-responsive">
+                  <table class="table table-nowrap table-centered">
+                    <tbody>
+                      <tr>
+                        <td style="width: 60px">
+                          <div class="form-check font-size-16 text-center">
+                            <input type="checkbox" class="form-check-input" id="tasks-completeCheck3" />
+                            <label class="form-check-label" for="tasks-completeCheck3"></label>
+                          </div>
+                        </td>
+                        <td>
+                          <a href="javascript:void(0)" class="fw-bold text-reset">UI Elements</a>
+                        </td>
+  
+                        <td>27 May, 2020</td>
+                        <td style="width: 160px">
+                          <span class="badge bg-success-subtle font-size-12">Complete</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-check font-size-16 text-center">
+                            <input type="checkbox" class="form-check-input" id="tasks-completeCheck2" />
+                            <label class="form-check-label" for="tasks-completeCheck2"></label>
+                          </div>
+                        </td>
+                        <td>
+                          <a href="javascript:void(0)" class="fw-bold text-reset">Authentication Pages</a>
+                        </td>
+  
+                        <td>27 May, 2020</td>
+                        <td>
+                          <span class="badge bg-success-subtle font-size-12">Complete</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-check font-size-16 text-center">
+                            <input type="checkbox" class="form-check-input" id="tasks-completeCheck1" />
+                            <label class="form-check-label" for="tasks-completeCheck1"></label>
+                          </div>
+                        </td>
+                        <td>
+                          <a href="javascript:void(0)" class="fw-bold text-reset">Admin Layout</a>
+                        </td>
+  
+                        <td>26 May, 2020</td>
+                        <td>
+                          <span class="badge bg-success-subtle font-size-12">Complete</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+  
+        <ng-template #TabContentMessages>
+          <div class="tab-content p-4">
+            <div class="tab-pane active">
+              <div>
+                <ngx-simplebar style="max-height: 430px">
+                  <div class="d-flex align-items-start border-bottom py-4">
+                    <div class="flex-shrink-0 me-2">
+                      <img class="rounded-circle avatar-xs" src="assets/images/users/avatar-3.jpg" alt="" />
+                    </div>
+                    <div class="flex-grow-1">
+                      <h5 class="font-size-15 mb-1">
+                        Marion Walker
+                        <small class="text-muted float-end">1 hr ago</small>
+                      </h5>
+                      <p class="text-muted">
+                        If several languages coalesce, the grammar of the
+                        resulting .
+                      </p>
+  
+                      <a href="javascript: void(0);" class="text-muted font-13 d-inline-block"><i
+                          class="mdi mdi-reply"></i> Reply</a>
+  
+                      <div class="d-flex align-items-start mt-4">
+                        <div class="flex-shrink-0 me-2">
+                          <img class="me-2 rounded-circle avatar-xs" src="assets/images/users/avatar-4.jpg" alt="" />
+                        </div>
+                        <div class="flex-grow-1">
+                          <h5 class="font-size-15 mt-0 mb-1">
+                            Shanon Marvin
+                            <small class="text-muted float-end">1 hr ago</small>
+                          </h5>
+                          <p class="text-muted">
+                            It will be as simple as in fact, it will be
+                            Occidental. To it will seem like simplified .
+                          </p>
+  
+                          <a href="javascript: void(0);" class="text-muted font-13 d-inline-block">
+                            <i class="mdi mdi-reply"></i> Reply
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-start border-bottom py-4">
+                    <div class="flex-shrink-0 me-2">
+                      <img class="me-2 rounded-circle avatar-xs" src="assets/images/users/avatar-5.jpg" alt="" />
+                    </div>
+                    <div class="flex-grow-1">
+                      <h5 class="font-size-15 mb-1">
+                        Janice Morgan
+                        <small class="text-muted float-end">2 hrs ago</small>
+                      </h5>
+                      <p class="text-muted">
+                        To achieve this, it would be necessary to have uniform
+                        pronunciation.
+                      </p>
+  
+                      <a href="javascript: void(0);" class="text-muted font-13 d-inline-block"><i
+                          class="mdi mdi-reply"></i> Reply</a>
+                    </div>
+                  </div>
+  
+                  <div class="d-flex align-items-start border-bottom py-4">
+                    <div class="flex-shrink-0 me-2">
+                      <img class="me-2 rounded-circle avatar-xs" src="assets/images/users/avatar-7.jpg" alt="" />
+                    </div>
+                    <div class="flex-grow-1">
+                      <h5 class="font-size-15 mb-1">
+                        Patrick Petty
+                        <small class="text-muted float-end">3 hrs ago</small>
+                      </h5>
+                      <p class="text-muted">
+                        Sed ut perspiciatis unde omnis iste natus error sit
+                      </p>
+  
+                      <a href="javascript: void(0);" class="text-muted font-13 d-inline-block"><i
+                          class="mdi mdi-reply"></i> Reply</a>
+                    </div>
+                  </div>
+                </ngx-simplebar>
+  
+                <div class="border rounded mt-4">
+                  <form action="#">
+                    <div class="px-2 py-1 bg-light">
+                      <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-sm btn-link text-reset text-decoration-none">
+                          <i class="uil uil-link"></i>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-link text-reset text-decoration-none">
+                          <i class="uil uil-smile"></i>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-link text-reset text-decoration-none">
+                          <i class="uil uil-at"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <textarea rows="3" class="form-control border-0 resize-none" placeholder="Your Message..."></textarea>
+                  </form>
+                </div>
+                <!-- end .border-->
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </div>
+
+      <div class="col-xl-9">
+        <div class="">
+          <div class="checkout-acco">
+            <ngb-accordion [closeOthers]="" activeIds="static-1" class="checkout-accordion">
+              <ngb-panel id="static-1">
+                <ng-template ngbPanelTitle>
+                  <a class="text-reset">
+                    <div class="d-flex align-items-start align-items-center py-0">
+                      <div class="me-3">
+                        <i class="uil uil-user-circle text-primary h3"></i>
+                      </div>
+                      <div class="flex-1 overflow-hidden">
+                        <h5 class="font-size-16 mt-2">Customer Information</h5>
+                      </div>
+                    </div>
+                  </a>
+                </ng-template>
+                <ng-template ngbPanelContent>
+                  <div id="checkout-billinginfo-collapse">
+                    <div class="border-top pt-4">
+                      <form>
+                        <div>
+                          <div class="row mb-2">                     
+                            <label class="form-label col-lg-3" for="billing-name">Customer Name</label>
+                            <span class="col-lg-3">LIM LAI SONG</span>
+                            <label class="form-label col-lg-3" for="billing-name">NRIC</label>
+                            <span class="col-lg-3">S1234567X</span>                            
+                          </div>
+
+                          <div class="row mb-2">   
+                            <label class="form-label col-lg-3" for="billing-name">Nationality</label>
+                            <span class="col-lg-3">SINGAPOREAN</span>                  
+                            <label class="form-label col-lg-3" for="billing-name">Contact Person</label>
+                            <span class="col-lg-3">KAREN</span>                            
+                          </div>
+
+                          <div class="row mb-2">
+                            <label class="form-label col-lg-3" for="billing-name">Mobile No.</label>
+                            <span class="col-lg-3">12345678</span>
+                            <label class="form-label col-lg-3" for="billing-name">Office No.</label>
+                            <span class="col-lg-3">87654321</span>
+                          </div>
+
+                          <div class="row">                     
+                            <label class="form-label col-lg-3" for="billing-name">Email Address</label>
+                            <span class="col-lg-3">test@gmail.com</span>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </ng-template>
+              </ngb-panel>
+
+              <ngb-panel id="static-2">
+                <ng-template ngbPanelTitle>
+                  <a class="text-reset">
+                    <div class="d-flex align-items-start align-items-center py-0">
+                      <div class="me-3">
+                        <i class="uil uil-car text-primary h3"></i>
+                      </div>
+                      <div class="flex-1 overflow-hidden">
+                        <h5 class="font-size-16 mb-1">Vehicle Information</h5>
+                      </div>
+                    </div>
+                  </a>
+                </ng-template>
+                <ng-template ngbPanelContent>
+                  <div id="checkout-shippinginfo-collapse">
+                    <div class="border-top py-4">
+                    <form>
+                        <div>
+                            <div class="row mb-2">                     
+                            <label class="form-label col-lg-3" for="billing-name">Customer Name</label>
+                            <span class="col-lg-3">LIM LAI SONG</span>
+                            <label class="form-label col-lg-3" for="billing-name">NRIC</label>
+                            <span class="col-lg-3">S1234567X</span>                            
+                            </div>
+
+                            <div class="row mb-2">   
+                            <label class="form-label col-lg-3" for="billing-name">Nationality</label>
+                            <span class="col-lg-3">SINGAPOREAN</span>                  
+                            <label class="form-label col-lg-3" for="billing-name">Contact Person</label>
+                            <span class="col-lg-3">KAREN</span>                            
+                            </div>
+
+                            <div class="row mb-2">
+                            <label class="form-label col-lg-3" for="billing-name">Mobile No.</label>
+                            <span class="col-lg-3">12345678</span>
+                            <label class="form-label col-lg-3" for="billing-name">Office No.</label>
+                            <span class="col-lg-3">87654321</span>
+                            </div>
+
+                            <div class="row">                     
+                            <label class="form-label col-lg-3" for="billing-name">Email Address</label>
+                            <span class="col-lg-3">test@gmail.com</span>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+                  </div>
+                </ng-template>
+              </ngb-panel>
+
+              <ngb-panel id="static-3">
+                <ng-template ngbPanelTitle>
+                  <a class="text-reset">
+                    <div class="d-flex align-items-start align-items-center py-0">
+                      <div class="me-3">
+                        <i class="uil uil-pricetag-alt text-primary h3"></i>
+                      </div>
+                      <div class="flex-1 overflow-hidden">
+                        <h5 class="font-size-16 mb-1">Sales Information</h5>
+                      </div>
+                    </div>
+                  </a>
+                </ng-template>
+                <ng-template ngbPanelContent>
+                  <div id="checkout-paymentinfo-collapse">
+                    <div class="border-top py-4">
+                        <form>
+                            <div>
+                                <div class="row mb-2">                     
+                                <label class="form-label col-lg-3" for="billing-name">Customer Name</label>
+                                <span class="col-lg-3">LIM LAI SONG</span>
+                                <label class="form-label col-lg-3" for="billing-name">NRIC</label>
+                                <span class="col-lg-3">S1234567X</span>                            
+                                </div>
+    
+                                <div class="row mb-2">   
+                                <label class="form-label col-lg-3" for="billing-name">Nationality</label>
+                                <span class="col-lg-3">SINGAPOREAN</span>                  
+                                <label class="form-label col-lg-3" for="billing-name">Contact Person</label>
+                                <span class="col-lg-3">KAREN</span>                            
+                                </div>
+    
+                                <div class="row mb-2">
+                                <label class="form-label col-lg-3" for="billing-name">Mobile No.</label>
+                                <span class="col-lg-3">12345678</span>
+                                <label class="form-label col-lg-3" for="billing-name">Office No.</label>
+                                <span class="col-lg-3">87654321</span>
+                                </div>
+    
+                                <div class="row">                     
+                                <label class="form-label col-lg-3" for="billing-name">Email Address</label>
+                                <span class="col-lg-3">test@gmail.com</span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                  </div>
+                </ng-template>
+              </ngb-panel>
+
+              <ngb-panel id="static-4">
+                <ng-template ngbPanelTitle>
+                  <a class="text-reset">
+                    <div class="d-flex align-items-start align-items-center py-0">
+                      <div class="me-3">
+                        <i class="uil uil-dollar-alt text-primary h3"></i>
+                      </div>
+                      <div class="flex-1 overflow-hidden">
+                        <h5 class="font-size-16 mb-1">Finance Information</h5>
+                      </div>
+                    </div>
+                  </a>
+                </ng-template>
+                <ng-template ngbPanelContent>
+                  <div id="checkout-paymentinfo-collapse">
+                    <div class="border-top py-4">
+                        <form>
+                            <div>
+                                <div class="row mb-2">                     
+                                <label class="form-label col-lg-3" for="billing-name">Customer Name</label>
+                                <span class="col-lg-3">LIM LAI SONG</span>
+                                <label class="form-label col-lg-3" for="billing-name">NRIC</label>
+                                <span class="col-lg-3">S1234567X</span>                            
+                                </div>
+    
+                                <div class="row mb-2">   
+                                <label class="form-label col-lg-3" for="billing-name">Nationality</label>
+                                <span class="col-lg-3">SINGAPOREAN</span>                  
+                                <label class="form-label col-lg-3" for="billing-name">Contact Person</label>
+                                <span class="col-lg-3">KAREN</span>                            
+                                </div>
+    
+                                <div class="row mb-2">
+                                <label class="form-label col-lg-3" for="billing-name">Mobile No.</label>
+                                <span class="col-lg-3">12345678</span>
+                                <label class="form-label col-lg-3" for="billing-name">Office No.</label>
+                                <span class="col-lg-3">87654321</span>
+                                </div>
+    
+                                <div class="row">                     
+                                <label class="form-label col-lg-3" for="billing-name">Email Address</label>
+                                <span class="col-lg-3">test@gmail.com</span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                  </div>
+                </ng-template>
+              </ngb-panel>
+
+              <ngb-panel id="static-5">
+                <ng-template ngbPanelTitle>
+                  <a class="text-reset">
+                    <div class="d-flex align-items-start align-items-center py-0">
+                      <div class="me-3">
+                        <i class="uil uil-refresh text-primary h3"></i>
+                      </div>
+                      <div class="flex-1 overflow-hidden">
+                        <h5 class="font-size-16 mb-1">Trade In Information</h5>
+                      </div>
+                    </div>
+                  </a>
+                </ng-template>
+                <ng-template ngbPanelContent>
+                  <div id="checkout-paymentinfo-collapse">
+                    <div class="border-top py-4">
+                        <form>
+                            <div>
+                                <div class="row mb-2">                     
+                                <label class="form-label col-lg-3" for="billing-name">Customer Name</label>
+                                <span class="col-lg-3">LIM LAI SONG</span>
+                                <label class="form-label col-lg-3" for="billing-name">NRIC</label>
+                                <span class="col-lg-3">S1234567X</span>                            
+                                </div>
+    
+                                <div class="row mb-2">   
+                                <label class="form-label col-lg-3" for="billing-name">Nationality</label>
+                                <span class="col-lg-3">SINGAPOREAN</span>                  
+                                <label class="form-label col-lg-3" for="billing-name">Contact Person</label>
+                                <span class="col-lg-3">KAREN</span>                            
+                                </div>
+    
+                                <div class="row mb-2">
+                                <label class="form-label col-lg-3" for="billing-name">Mobile No.</label>
+                                <span class="col-lg-3">12345678</span>
+                                <label class="form-label col-lg-3" for="billing-name">Office No.</label>
+                                <span class="col-lg-3">87654321</span>
+                                </div>
+    
+                                <div class="row">                     
+                                <label class="form-label col-lg-3" for="billing-name">Email Address</label>
+                                <span class="col-lg-3">test@gmail.com</span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                  </div>
+                </ng-template>
+              </ngb-panel>
+            </ngb-accordion>
+          </div>
+        </div>
+
+        <!-- end row-->
+      </div>
+
+      <div class="col-xl-3">
+        <div class="card checkout-order-summary">
+            <div class="card-body">
+              <div class="p-2 bg-light mb-2">
+                <h5 class="font-size-16 mb-0">
+                  Quotation Summary
+                </h5>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-centered mb-0 table-nowrap">
+                  <tbody>
+                    <tr>
+                      <td colspan="2">
+                        <h5 class="font-size-14 m-0">Quotation No.</h5>
+                      </td>
+                      <td>
+                        SALQ202311-000005
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">
+                        <h5 class="font-size-14 m-0">Quotation Date</h5>
+                      </td>
+                      <td>
+                        07/11/2023
+                      </td>
+                    </tr>
+  
+                    <tr>
+                      <td colspan="2">
+                        <h5 class="font-size-14 m-0">Quoted By</h5>
+                      </td>
+                      <td>
+                        David
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">
+                        <h5 class="font-size-14 m-0">Status</h5>
+                      </td>
+                      <td>
+                        <span class="badge bg-pill bg-success-subtle text-success font-size-12">OPEN</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="d-grid gap-3 pt-2">
+                <button type="button" class="btn btn-primary btn-sm" (click)="edit();"><i class="uil uil-pen me-1"></i> Edit</button>
+            </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <!-- end row -->
+  </div>

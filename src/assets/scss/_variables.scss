@@ -27,7 +27,7 @@ $sidebar-dark-menu-item-active-color: var(--#{$prefix}sidebar-dark-menu-item-act
 $sidebar-dark-menu-item-active-bg-color: var(--#{$prefix}sidebar-dark-menu-item-active-bg-color);
 
 // Topbar - Deafult Light
-$header-height: 70px;
+$header-height: 50px;
 $header-bg: var(--#{$prefix}header-bg);
 $header-item-color: #555b6d;
 
@@ -71,7 +71,7 @@ $font-weight-semibold: 600;
 $apex-grid-color:  var(--#{$prefix}apex-grid-color);
 
 // auth bg
-$auth-bg: rgba(91,140,232,.25);
+$auth-bg: rgba(190, 211, 250, 0.25);
 
 // table
 $table-head-bg:               $gray-100;
@@ -118,7 +118,8 @@ $grays: (
 // fusv-enable
 
 // scss-docs-start color-variables
-$blue:    #5b73e8;
+// $blue:    #5b73e8;
+$blue:    #039cd0;
 $indigo:  #564ab1;
 $purple:  #6f42c1;
 $pink:    #e83e8c;

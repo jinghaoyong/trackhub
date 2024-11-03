@@ -64,7 +64,8 @@
     --#{$prefix}sidebar-menu-sub-item-color:            #7b8190;
     --#{$prefix}sidebar-menu-item-icon-color:           #7b8190;
     --#{$prefix}sidebar-menu-item-hover-color:          #383c40;
-    --#{$prefix}sidebar-menu-item-active-color:         #5b73e8;
+    // --#{$prefix}sidebar-menu-item-active-color:         #5b73e8;
+    --#{$prefix}sidebar-menu-item-active-color:         #039cd0;
     --#{$prefix}sidebar-menu-item-active-bg-color:      #f3f8fb;
 
     [data-sidebar="dark"]{
@@ -94,7 +95,8 @@
 }
 
     [data-topbar="dark"] {
-        --#{$prefix}header-bg:                            #2f374e;
+        // --#{$prefix}header-bg:                            #2f374e;
+        --#{$prefix}header-bg:                            #039cd0;
         --#{$prefix}header-item-color:                    #{$gray-100};
         --#{$prefix}header-item-sub-color:                #8795ab;
     }
@@ -122,7 +124,8 @@
             --#{$prefix}sidebar-menu-sub-item-color:            #7b8190;
             --#{$prefix}sidebar-menu-item-icon-color:           #7b8190;
             --#{$prefix}sidebar-menu-item-hover-color:          #383c40;
-            --#{$prefix}sidebar-menu-item-active-color:         #5b73e8;
+            // --#{$prefix}sidebar-menu-item-active-color:         #5b73e8;
+            --#{$prefix}sidebar-menu-item-active-color:         #039cd0;
             --#{$prefix}sidebar-menu-item-active-bg-color:      #f3f8fb;
        }
 

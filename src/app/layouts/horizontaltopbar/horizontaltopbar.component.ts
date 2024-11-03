@@ -13,7 +13,6 @@ import { LanguageService } from '../../core/services/language.service';
 import { EventService } from '../../core/services/event.service';
 import { AuthenticationService } from '../../core/services/auth.service';
 import { AuthfakeauthenticationService } from '../../core/services/authfake.service';
-import { FirebaseService } from 'src/app/core/services/firebase/firebase.service';
 
 @Component({
   selector: 'app-horizontaltopbar',
@@ -49,7 +48,6 @@ export class HorizontaltopbarComponent implements OnInit, AfterViewInit {
     private authService: AuthenticationService,
     private eventService: EventService,
     private authFackservice: AuthfakeauthenticationService,
-    private firebaseServ: FirebaseService,
     public languageService: LanguageService,
     public _cookiesService: CookieService) {
     router.events.subscribe(event => {
@@ -91,7 +89,11 @@ export class HorizontaltopbarComponent implements OnInit, AfterViewInit {
    * Logout the user
    */
   logout() {
-    this.firebaseServ.logout();
+    if (environment.defaultauth === 'firebase') {
+      this.authService.logout();
+    } else {
+      this.authFackservice.logout();
+    }
     this.router.navigate(['/account/login']);
   }
 
@@ -156,11 +158,11 @@ export class HorizontaltopbarComponent implements OnInit, AfterViewInit {
               if (parent5) {
                 parent5.classList.remove('active');
                 const menuelement = document.getElementById("topnav-menu-content")
-                if (menuelement !== null)
-                  if (menuelement.classList.contains('show'))
-                    document
-                      .getElementById("topnav-menu-content")
-                      .classList.remove("show");
+                if(menuelement !== null )
+                if(menuelement.classList.contains('show'))
+                document
+                    .getElementById("topnav-menu-content")
+                    .classList.remove("show");
               }
             }
           }
@@ -246,7 +248,7 @@ export class HorizontaltopbarComponent implements OnInit, AfterViewInit {
   /**
    * Topbar light
    */
-  topbarDark() {
+   topbarDark() {
     document.body.setAttribute('data-topbar', 'dark');
     document.body.removeAttribute('data-layout-size');
   }

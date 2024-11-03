@@ -158,11 +158,11 @@
 }
 
 .menu-title {
-    padding: 12px 20px !important;
+    padding: 12px 30px !important;
     letter-spacing: 0.05em;
     pointer-events: none;
     cursor: default;
-    font-size: 11px;
+    font-size: 13px;
     text-transform: uppercase;
     color: var(--#{$prefix}sidebar-menu-item-icon-color);
     font-weight: $font-weight-semibold;
